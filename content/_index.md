@@ -8,14 +8,13 @@ sections:
   - block: hero
     content:
       title: |
-        Wowchemy
-        Research Group
+        Melady Group USC
       image:
         filename: welcome.jpg
       text: |
         <br>
         
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+        The **USC Melady Lab** is at the forefront of developing innovative machine learning and data mining algorithms to uncover insights from complex data. We have made significant advances in interpretable machine learning, temporal causal modeling, deep learning for healthcare, social network analysis, physics-informed machine learning, learning in games, autonomous vehicles, anomaly detection, climate science, and other areas. Our techniques have led to impactful discoveries and practical applications across many disciplines. We continue to push the boundaries of what’s possible with machine learning, striving to solve challenging real-world problems through novel algorithms and models that handle time series, spatial, relational, and other structured data types.
   
   - block: collection
     content:
