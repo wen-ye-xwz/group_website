@@ -1,9 +1,12 @@
 ---
 # Display name
-title: Nelson Bighetti
-outputs:
-  - alias
-url: https://wen-ye-xwz.github.io/
+
+title: Wen Ye
+outputs: ["alias"]
+aliases:
+  - "https://wen-ye-xwz.github.io/"
+
+
 
 # # Full Name (for SEO)
 # first_name: Nelson
