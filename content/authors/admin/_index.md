@@ -3,7 +3,7 @@
 
 title: Wen Ye
 outputs: ["alias"]
-aliases:
+alias:
   - "https://wen-ye-xwz.github.io/"
 
 
