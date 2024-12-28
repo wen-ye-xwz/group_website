@@ -2,9 +2,8 @@
 # Display name
 
 title: Wen Ye
-outputs: ["alias"]
-alias:
-  - "https://wen-ye-xwz.github.io/"
+redirect: "https://wen-ye-xwz.github.io/"
+
 
 
 

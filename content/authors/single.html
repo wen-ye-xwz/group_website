@@ -1,0 +1,17 @@
+{{ if .Params.redirect }}
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta http-equiv="refresh" content="0;url={{ .Params.redirect }}" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting to <a href="{{ .Params.redirect }}">{{ .Params.redirect }}</a></p>
+  </body>
+  </html>
+{{ else }}
+  <article>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
+{{ end }}
