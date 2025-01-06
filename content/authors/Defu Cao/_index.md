@@ -24,7 +24,7 @@ role: PhD Students
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'defucao@usc.edu'
+    link: 'mailto:defucao@usc.edu'
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/caodefu_dove
