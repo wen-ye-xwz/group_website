@@ -15,7 +15,7 @@ last_name: Griesemer
 superuser: false
 
 # Role/position
-role: PhD Students
+role: PhD Student
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
