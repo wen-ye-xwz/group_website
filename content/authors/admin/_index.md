@@ -24,7 +24,7 @@ role: PhD Students
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'yewen@usc.edu'
+    link: 'mailto:yewen@usc.edu'
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/Wendy_xwz

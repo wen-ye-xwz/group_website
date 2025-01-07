@@ -24,7 +24,7 @@ role: Alumni
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'sirisha.rambhatla@uwaterloo.ca'
+    link: 'mailto:sirisha.rambhatla@uwaterloo.ca'
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/siri_r

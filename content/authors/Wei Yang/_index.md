@@ -23,7 +23,7 @@ role: PhD Student
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'wyang930@usc.edu'
+    link: 'mailto:wyang930@usc.edu'
   - icon: twitter
     icon_pack: fab
     link: ''

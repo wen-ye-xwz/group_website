@@ -24,7 +24,7 @@ role: Alumni
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'chuizhem@usc.edu'
+    link: 'mailto:chuizhem@usc.edu'
   - icon: twitter
     icon_pack: fab
     link: ''

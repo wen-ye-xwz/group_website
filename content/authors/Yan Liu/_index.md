@@ -24,7 +24,7 @@ role: Professor, Computer Science Department
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'yanliu.cs@usc.edu'
+    link: 'mailto:yanliu.cs@usc.edu'
   - icon: twitter
     icon_pack: fab
     link: https://x.com/yanliu_usc?lang=en

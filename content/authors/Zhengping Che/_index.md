@@ -24,7 +24,7 @@ role: Alumni
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'chezhengping@gmail.com'
+    link: 'mailto:chezhengping@gmail.com'
   - icon: twitter
     icon_pack: fab
     link: ''

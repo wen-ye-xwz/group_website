@@ -24,7 +24,7 @@ role: PhD Students
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'emilyn98@usc.edu'
+    link: 'mailto:emilyn98@usc.edu'
   - icon: twitter
     icon_pack: fab
     link: ''

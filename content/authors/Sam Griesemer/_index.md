@@ -24,7 +24,7 @@ role: PhD Students
 social:
   - icon: envelope
     icon_pack: fas
-    link: samgriesemer@usc.edu
+    link: 'mailto:samgriesemer@usc.edu'
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/samgriesemer

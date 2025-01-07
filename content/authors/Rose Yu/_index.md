@@ -24,7 +24,7 @@ role: Alumni
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'roseyu@ucsd.com'
+    link: 'mailto:roseyu@ucsd.com'
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/yuqirose

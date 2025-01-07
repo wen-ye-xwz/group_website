@@ -23,7 +23,7 @@ role: PhD Student
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'sajjadsh@usc.edu'
+    link: 'mailto:sajjadsh@usc.edu'
   - icon: twitter
     icon_pack: fab
     link: ''

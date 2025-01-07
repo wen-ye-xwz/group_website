@@ -24,7 +24,7 @@ role: Alumni
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'psanjay@umbc.com'
+    link: 'mailto:psanjay@umbc.com'
   - icon: twitter
     icon_pack: fab
     link: ''

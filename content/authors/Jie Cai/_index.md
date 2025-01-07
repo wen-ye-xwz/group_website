@@ -24,7 +24,7 @@ role: PhD Students
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'caijie@usc.edu'
+    link: 'mailto:caijie@usc.edu'
   - icon: twitter
     icon_pack: fab
     link: ''

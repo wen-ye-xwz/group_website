@@ -24,7 +24,7 @@ role: Alumni
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'natalirsky@gmail.com'
+    link: 'mailto:natalirsky@gmail.com'
   - icon: twitter
     icon_pack: fab
     link: ''

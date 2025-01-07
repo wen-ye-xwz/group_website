@@ -24,7 +24,7 @@ role: Alumni
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'nitinkamra1992@gmail.com'
+    link: 'mailto:nitinkamra1992@gmail.com'
   - icon: twitter
     icon_pack: fab
     link: ''

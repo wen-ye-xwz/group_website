@@ -24,7 +24,7 @@ role: Alumni
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'ceejkl@gmail.com'
+    link: 'mailto:ceejkl@gmail.com'
   - icon: twitter
     icon_pack: fab
     link: https://twitter.com/YizhouZhang8

@@ -24,7 +24,7 @@ role: Alumni
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'yaguang@google.com'
+    link: 'mailto:yaguang@google.com'
   - icon: twitter
     icon_pack: fab
     link: ''
