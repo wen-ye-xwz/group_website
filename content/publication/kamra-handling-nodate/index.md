@@ -6,7 +6,7 @@ authors:
 - Debarun Kar
 - Yan Liu
 - Milind Tambe
-date: -01-01
+date: '2017-01-01'
 publishDate: '2025-01-08T12:27:49.290676Z'
 publication_types:
 - article-journal

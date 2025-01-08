@@ -6,7 +6,7 @@ authors:
 - Jing Huang
 - Hao Yang
 - Yan Liu
-date: -01-01
+date: '2017-01-01'
 publishDate: '2025-01-08T12:27:49.341381Z'
 publication_types:
 - article-journal
