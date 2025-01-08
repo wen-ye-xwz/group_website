@@ -6,7 +6,7 @@ authors:
 - Kyunghyun Cho
 - David Sontag
 - Yan Liu
-date: '2016-11-01'
+date: '2018-11-01'
 publishDate: '2025-01-08T12:24:01.636905Z'
 publication_types:
 - manuscript
