@@ -7,7 +7,7 @@ redirect: "https://zijunjkl.github.io/"
 
 
 
-# Full Name (for SEO)
+# Full Name 
 first_name: Zijun 
 last_name: Cui
 
