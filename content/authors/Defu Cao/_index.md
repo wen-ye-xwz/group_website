@@ -15,7 +15,7 @@ last_name: Cao
 superuser: true
 
 # Role/position
-role: PhD Student
+role: PhD Candidate
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
