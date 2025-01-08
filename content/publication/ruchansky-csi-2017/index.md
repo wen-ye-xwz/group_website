@@ -1,0 +1,40 @@
+---
+title: 'CSI: A Hybrid Deep Model for Fake News Detection'
+authors:
+- Natali Ruchansky
+- Sungyong Seo
+- Yan Liu
+date: '2017-11-01'
+publishDate: '2025-01-08T12:27:49.304566Z'
+publication_types:
+- paper-conference
+publication: '*Proceedings of the 2017 ACM on Conference on Information and Knowledge
+  Management*'
+doi: 10.1145/3132847.3132877
+abstract: 'The topic of fake news has drawn attention both from the public and the
+  academic communities. Such misinformation has the potential of affecting public
+  opinion, providing an opportunity for malicious parties to manipulate the outcomes
+  of public events such as elections. Because such high stakes are at play, automatically
+  detecting fake news is an important, yet challenging problem that is not yet well
+  understood. Nevertheless, there are three generally agreed upon characteristics
+  of fake news: the text of an article, the user response it receives, and the source
+  users promoting it. Existing work has largely focused on tailoring solutions to
+  one particular characteristic which has limited their success and generality. In
+  this work, we propose a model that combines all three characteristics for a more
+  accurate and automated prediction. Specifically, we incorporate the behavior of
+  both parties, users and articles, and the group behavior of users who propagate
+  fake news. Motivated by the three characteristics, we propose a model called CSI
+  which is composed of three modules: Capture, Score, and Integrate. The first module
+  is based on the response and text; it uses a Recurrent Neural Network to capture
+  the temporal pattern of user activity on a given article. The second module learns
+  the source characteristic based on the behavior of users, and the two are integrated
+  with the third module to classify an article as fake or not. Experimental analysis
+  on real-world data demonstrates that CSI achieves higher accuracy than existing
+  models, and extracts meaningful latent representations of both users and articles.'
+tags:
+- Computer Science - Machine Learning
+- Computer Science - Social and Information Networks
+links:
+- name: URL
+  url: http://arxiv.org/abs/1703.06959
+---
