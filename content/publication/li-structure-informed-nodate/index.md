@@ -5,7 +5,7 @@ authors:
 - Chuizheng Meng
 - Cyrus Shahabi
 - Yan Liu
-date: -01-01
+date: '2019-01-01'
 publication_types:
 - article-journal
 abstract: A variety of real-world applications require the modeling and the simulation
