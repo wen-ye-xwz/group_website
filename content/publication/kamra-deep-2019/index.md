@@ -8,7 +8,6 @@ authors:
 - Yan Liu
 - Milind Tambe
 date: '2019-05-01'
-publishDate: '2025-01-08T09:58:15.914489Z'
 publication_types:
 - paper-conference
 publication: '*Proceedings of the 18th International Conference on Autonomous Agents

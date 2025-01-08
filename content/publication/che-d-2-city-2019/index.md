@@ -13,7 +13,6 @@ authors:
 - Yan Liu
 - Jieping Ye
 date: '2019-06-01'
-publishDate: '2025-01-08T09:58:15.935999Z'
 publication_types:
 - manuscript
 publication: '*arXiv*'

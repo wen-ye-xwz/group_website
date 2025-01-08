@@ -4,7 +4,6 @@ authors:
 - Sungyong Seo
 - Yan Liu
 date: '2019-02-01'
-publishDate: '2025-01-08T09:58:15.962783Z'
 publication_types:
 - manuscript
 publication: '*arXiv*'

@@ -8,7 +8,6 @@ authors:
 - Yan Liu
 - Milind Tambe
 date: '2019-10-01'
-publishDate: '2025-01-08T09:58:15.907107Z'
 publication_types:
 - paper-conference
 publication: '*Decision and Game Theory for Security: 10th International Conference,

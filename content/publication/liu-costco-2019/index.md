@@ -6,7 +6,6 @@ authors:
 - Michael Tsang
 - Yan Liu
 date: '2019-07-01'
-publishDate: '2025-01-08T09:58:15.888216Z'
 publication_types:
 - paper-conference
 publication: '*Proceedings of the 25th ACM SIGKDD International Conference on Knowledge
