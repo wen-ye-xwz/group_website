@@ -1,0 +1,43 @@
+---
+title: Hardware Reusability Optimization for High-Level Synthesis of Component-Based
+  Processors
+authors:
+- Xiahua Liu
+- Defu Cao
+- Qinshu Chen
+date: '2022-05-01'
+publishDate: '2025-01-08T06:22:33.467365Z'
+publication_types:
+- paper-conference
+publication: '*2022 11th International Conference on Communications, Circuits and
+  Systems (ICCCAS)*'
+doi: 10.1109/ICCCAS55266.2022.9825407
+abstract: High-level synthesis provides automatic generation for RTL codes such as
+  Verilog, and describes the hardware circuit by using high level language to meet
+  the requirements and accelerate the development flow. At present, many high-level
+  synthesis tools use typical compiler techniques and infrastructures to translate
+  those high-level languages (such as chisel) into circuit description (such as Verilog).
+  Most of the generated designs lack readability, which makes it difficult to optimize
+  further. On the other hand, the software compilation framework may not make full
+  use of the parallelism and reusability of hardware circuits in time and space, which
+  leads to resource waste and affects the performance of the final design. Based on
+  the utilization of hardware reusability, this paper optimizes the hardware compilation
+  framework of FIRRTL. It considers resource reuse and equivalent transformation of
+  priorities. Experiments on RISC-V chips and commercial EDA tools show that these
+  optimizations can reduce the design area by 9.65% with slight improvement in performance.
+tags:
+- Codes
+- Hardware
+- high level synthesis
+- High level synthesis
+- Parallel processing
+- processor design
+- Program processors
+- reusability
+- rocket chip
+- Rockets
+- Software
+links:
+- name: URL
+  url: https://ieeexplore.ieee.org/document/9825407
+---
