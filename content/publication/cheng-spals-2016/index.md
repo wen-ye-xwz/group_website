@@ -1,0 +1,33 @@
+---
+title: 'SPALS: Fast Alternating Least Squares via Implicit Leverage Scores Sampling'
+authors:
+- Dehua Cheng
+- Richard Peng
+- Yan Liu
+- Ioakeim Perros
+date: '2016-01-01'
+publishDate: '2025-01-08T22:16:47.002779Z'
+publication_types:
+- paper-conference
+publication: '*Advances in Neural Information Processing Systems*'
+abstract: Tensor CANDECOMP/PARAFAC (CP) decomposition is a powerful but computationally
+  challenging tool in modern data analytics. In this paper, we show ways of sampling
+  intermediate steps of alternating minimization algorithms for computing low rank
+  tensor CP decompositions, leading to the sparse alternating least squares (SPALS)
+  method. Specifically, we sample the the Khatri-Rao product, which arises as an intermediate
+  object during the iterations of alternating least squares. This product captures
+  the interactions between different tensor modes, and form the main computational
+  bottleneck for solving many tensor related tasks. By exploiting the spectral structures
+  of the matrix Khatri-Rao product, we provide efficient access to its statistical
+  leverage scores. When applied to the tensor CP decomposition, our method leads to
+  the first algorithm that runs in sublinear time per-iteration and approximates the
+  output of deterministic alternating least squares algorithms. Empirical evaluations
+  of this approach show significantly speedups over existing randomized and deterministic
+  routines for performing CP decomposition. On a tensor of the size 2.4m by 6.6m by
+  92k with over 2 billion nonzeros formed by Amazon product reviews, our routine converges
+  in two minutes to the same error as deterministic ALS.
+links:
+- name: URL
+  url: 
+    https://papers.nips.cc/paper_files/paper/2016/hash/f4f6dce2f3a0f9dada0c2b5b66452017-Abstract.html
+---
