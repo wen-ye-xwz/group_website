@@ -10,7 +10,6 @@ authors:
 - Jieping Ye
 - Yan Liu
 date: '2019-10-01'
-publishDate: '2025-01-08T10:06:25.108633Z'
 publication_types:
 - paper-conference
 publication: '*2019 IEEE/CVF International Conference on Computer Vision Workshop

@@ -8,7 +8,6 @@ authors:
 - Ming Zhang
 - Yan Liu
 date: '2019-01-01'
-publishDate: '2025-01-08T10:06:25.124681Z'
 publication_types:
 - manuscript
 publication: '*arXiv*'

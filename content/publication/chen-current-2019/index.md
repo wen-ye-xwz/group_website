@@ -10,7 +10,6 @@ authors:
 - Prokar Dasgupta
 - Andrew J. Hung
 date: '2019-10-01'
-publishDate: '2025-01-08T10:06:25.079167Z'
 publication_types:
 - article-journal
 publication: '*BJU international*'
