@@ -1,0 +1,49 @@
+---
+title: An Examination of Multivariate Time Series Hashing with Applications to Health
+  Care
+authors:
+- David C. Kale
+- Dian Gong
+- Zhengping Che
+- Yan Liu
+- Gerard Medioni
+- Randall Wetzel
+- Patrick Ross
+date: '2014-12-01'
+publishDate: '2025-01-08T22:54:33.226677Z'
+publication_types:
+- paper-conference
+publication: '*2014 IEEE International Conference on Data Mining*'
+doi: 10.1109/ICDM.2014.153
+abstract: As large-scale multivariate time series data become increasingly common
+  in application domains, such as health care and traffic analysis, researchers are
+  challenged to build efficient tools to analyze it and provide useful insights. Similarity
+  search, as a basic operator for many machine learning and data mining algorithms,
+  has been extensively studied before, leading to several efficient solutions. However,
+  similarity search for multivariate time series data is intrinsically challenging
+  because (1) there is no conclusive agreement on what is a good similarity metric
+  for multivariate time series data and (2) calculating similarity scores between
+  two time series is often computationally expensive. In this paper, we address this
+  problem by applying a generalized hashing framework, namely kernelized locality
+  sensitive hashing, to accelerate time series similarity search with a series of
+  representative similarity metrics. Experiment results on three large-scale clinical
+  data sets demonstrate the effectiveness of the proposed approach.
+tags:
+- alignment
+- Databases
+- dynamic time warping
+- Euclidean distance
+- hashing
+- Kernel
+- kernel methods
+- nearest neighbor
+- search
+- similarity
+- Time measurement
+- time series
+- Time series analysis
+- Vectors
+links:
+- name: URL
+  url: https://ieeexplore.ieee.org/abstract/document/7023343
+---
