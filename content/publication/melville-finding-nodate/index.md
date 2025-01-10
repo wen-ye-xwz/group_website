@@ -7,7 +7,7 @@ authors:
 - Ildar Khabibrakhmanov
 - Cezar Pendus
 - Timothy Bowden
-date: '2007'
+date: '2007-01-01'
 publishDate: '2025-01-10T01:56:20.097347Z'
 publication_types:
 - article-journal
