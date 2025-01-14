@@ -11,6 +11,8 @@ sections:
         Melady Group USC
       image:
         filename: welcome.jpg
+      logo:
+        filename: logo.png
       text: |
         <br>
         
