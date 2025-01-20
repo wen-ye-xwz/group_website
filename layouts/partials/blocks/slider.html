@@ -1,0 +1,169 @@
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $hash_id := .wcIdentifier }}
+
+{{ $image_folder := $block.content.image_folder | default "media/slides" }}
+{{ $images := readDir (printf "assets/%s" $image_folder) }}
+{{ $slides := slice }}
+
+{{ $grid_image_folder := $block.content.grid_image_folder | default "media/memories" }}
+{{ $grid_images := readDir (printf "assets/%s" $grid_image_folder) }}
+{{ $grid_photos := slice }}
+
+{{ range $image := $images }}
+  {{ $filename := $image.Name }}
+  {{ if or (strings.HasSuffix $filename ".jpg") (strings.HasSuffix $filename ".jpeg") (strings.HasSuffix $filename ".png") (strings.HasSuffix $filename ".gif") }}
+    {{ $slides = $slides | append (dict "filename" $filename) }}
+  {{ end }}
+{{ end }}
+
+{{ range $image := $grid_images }}
+  {{ $filename := $image.Name }}
+  {{ if or 
+      (strings.HasSuffix $filename ".jpg") 
+      (strings.HasSuffix $filename ".jpeg") 
+      (strings.HasSuffix $filename ".png") 
+      (strings.HasSuffix $filename ".gif") 
+      (strings.HasSuffix $filename ".webp") }}
+    {{ $grid_photos = $grid_photos | append (dict "filename" $filename) }}
+  {{ end }}
+{{ end }}
+
+{{ $slide_count := len $slides }}  
+
+<!-- Indicators -->
+<head>
+    <style>
+      .carousel {
+  margin-bottom: 30px; /* Space between carousel and masonry grid */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 50px;
+  height: 50px;
+  background-size: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+}
+
+.carousel-indicators {
+  bottom: 10px; /* Position indicators slightly above the bottom */
+  z-index: 10;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Increase min size for larger images */
+  gap: 24px; /* Increase gap for more spacing */
+  padding: 20px;
+}
+
+.masonry-item {
+  overflow: hidden;
+  border-radius: 12px; /* Maintain rounded corners */
+  position: relative;
+}
+
+.masonry-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px; /* Match container corners */
+}
+
+.masonry-item.size-0 {
+  grid-row: span 4; /* Tall and wide */
+  grid-column: span 2;
+}
+
+.masonry-item.size-1 {
+  grid-row: span 3; /* Medium height */
+  grid-column: span 1;
+}
+
+.masonry-item.size-2 {
+  grid-row: span 5; /* Very tall */
+  grid-column: span 2; /* Wider for emphasis */
+}
+
+.masonry-item.size-3 {
+  grid-row: span 3; /* Standard size */
+  grid-column: span 2; /* Wide but not tall */
+}
+
+    </style>
+  </head>
+  
+<div class="header" style="text-align: center; margin-bottom: 20px;">
+  <h1>Lab Outings</h1>
+</div>
+
+<div id="{{$hash_id}}" class="carousel slide" data-ride="carousel" data-interval="20000" style="position: relative;">
+  <!-- Indicators -->
+  {{ if gt $slide_count 1 }}
+  <ol class="carousel-indicators">
+    {{ range $index, $item := $slides }}
+    <li data-target="#{{$hash_id}}" data-slide-to="{{$index}}" {{if eq $index 0}}class="active"{{end}}></li>
+    {{ end }}
+  </ol>
+  {{ end }}
+
+  <!-- Carousel slides -->
+  <div class="carousel-inner">
+    {{ range $index, $item := $slides }}
+    {{ $bg_img := resources.Get (printf "%s/%s" $image_folder $item.filename) }}
+    {{ if $bg_img }}
+      <div class="carousel-item{{if eq $index 0}} active{{end}}">
+        <img src="{{ $bg_img.Permalink }}" alt="{{ $item.filename }}" class="d-block w-100" style="height: 560px; object-fit: cover;">
+        <div class="carousel-caption">
+          <p style="color: whitesmoke; font-size: 1.5rem; font-weight: bold; margin-bottom: 10px;">
+            {{ $filename := $item.filename }}
+            {{ $extension := path.Ext $filename }}
+            {{ $basename := strings.TrimSuffix $extension $filename }}
+            {{ $clean_name := replace (replace $basename "_" " ") "-" " " }}
+            {{ $clean_name | title }}
+          </p>
+        </div>
+      </div>
+    {{ end }}
+    {{ end }}
+  </div>
+
+  <!-- Left and right controls -->
+  {{ if gt $slide_count 1 }}
+  <a class="carousel-control-prev" href="#{{$hash_id}}" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#{{$hash_id}}" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  {{ end }}
+</div>
+<div class="header" style="text-align: center; margin-bottom: 20px;">
+  <h1>Lab Memories</h1>
+</div>
+<!-- Masonry Grid -->
+<div class="masonry-grid">
+  {{ range $index, $item := $grid_photos }}
+    {{ $bg_img := resources.Get (printf "%s/%s" $grid_image_folder $item.filename) }}
+    {{ if $bg_img }}
+      <div class="masonry-item" style="grid-row-end: span {{ add 2 (mod $index 3) }};">
+        <img src="{{ $bg_img.Permalink }}" alt="{{ $item.filename }}" loading="lazy">
+      </div>
+    {{ else }}
+      <div class="masonry-item" style="background-color: #ccc; text-align: center; padding: 20px; grid-row-end: span 2;">
+        <p>Image not found</p>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
