@@ -1,0 +1,47 @@
+{{/* Hugo Blox: Hero */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $bg := $block.design.background }}
+
+<div class="container d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 85vh; margin-top: -1rem;">
+
+    {{/* Hero title - Reduced gap */}}
+    {{ with $block.content.title }}
+      <h1 class="hero-title mt-0 mb-3">{{ . | markdownify }}</h1>
+    {{ end }}
+
+    {{/* Hero image with increased height */}}
+    {{ if $block.content.image.filename }}
+        {{- $image := resources.Get (path.Join "media" $block.content.image.filename) -}}
+        {{ if $image }}
+            {{ $isSVG := eq $image.MediaType.SubType "svg" }}
+            {{ if $isSVG -}}
+                <img src="{{ $image.RelPermalink }}" alt="{{ $block.Title }}" class="img-fluid mb-0" style="width: 65%; height: 100%; max-height: 350px; object-fit: cover;">
+            {{- else }}
+                {{ $legacy_img := $image.Resize "1000x" }}
+                <img src="{{ $legacy_img.RelPermalink }}" width="65%" height="auto" class="img-fluid mb-0" style="max-height: 350px; object-fit: cover;" alt="{{ $block.Title }}">
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{/* Hero text with reduced gap */}}
+    {{ with $block.content.text }}
+      <div class="hero-lead text-justify" style="max-width: 800px; margin: -1rem;">
+        {{ . | $page.RenderString | emojify }}
+      </div>
+    {{ end }}
+
+    {{/* Call-to-action button with reduced spacing */}}
+    {{ if $block.content.cta.url }}
+        <p class="cta-btns mt-0">
+            <a href="{{ $block.content.cta.url | safeURL }}" class="btn btn-primary btn-lg">
+                {{ $block.content.cta.label | markdownify | emojify | safeHTML }}
+            </a>
+        </p>
+    {{ end }}
+
+</div>
