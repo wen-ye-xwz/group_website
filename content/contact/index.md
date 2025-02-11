@@ -7,7 +7,7 @@ type: landing
 sections:
   - block: contact
     content:
-      title: Contact
+      title: Contact Us
       text: |-
         Melady Lab is located in Ginsburg Hall 4th floor. For getting involved and joining us:
 
