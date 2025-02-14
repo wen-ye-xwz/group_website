@@ -1,4 +1,4 @@
-{{/* Hugo Blox: Hero */}}
+{{/* Hugo Blox: Hero - Clean & Professional UI */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
 
@@ -7,38 +7,42 @@
 {{ $block := .wcBlock }}
 {{ $bg := $block.design.background }}
 
-<div class="container d-flex flex-column justify-content-center align-items-center text-center" style="min-height: 85vh; margin-top: -1rem;">
+<div class="container d-flex flex-column justify-content-center align-items-center text-center" 
+     style="min-height: 80vh; margin-top: -0.5rem; ">
 
-    {{/* Hero title - Reduced gap */}}
-    {{ with $block.content.title }}
-      <h1 class="hero-title mt-0 mb-3">{{ . | markdownify }}</h1>
-    {{ end }}
-
-    {{/* Hero image with increased height */}}
+    {{/* Hero Image - No Extra Effects */}}
     {{ if $block.content.image.filename }}
         {{- $image := resources.Get (path.Join "media" $block.content.image.filename) -}}
         {{ if $image }}
             {{ $isSVG := eq $image.MediaType.SubType "svg" }}
             {{ if $isSVG -}}
-                <img src="{{ $image.RelPermalink }}" alt="{{ $block.Title }}" class="img-fluid mb-0" style="width: 65%; height: 100%; max-height: 350px; object-fit: cover;">
+                <img src="{{ $image.RelPermalink }}" alt="{{ $block.Title }}" class="img-fluid my-2" 
+                     style="max-width: 60%; height: auto; max-height: 500px; object-fit: contain;">
             {{- else }}
-                {{ $legacy_img := $image.Resize "1000x" }}
-                <img src="{{ $legacy_img.RelPermalink }}" width="65%" height="auto" class="img-fluid mb-0" style="max-height: 350px; object-fit: cover;" alt="{{ $block.Title }}">
+                {{ $legacy_img := $image.Resize "900x" }}
+                <img src="{{ $legacy_img.RelPermalink }}" width="60%" height="auto" class=" my-2" 
+                     style="max-height: 350px; object-fit: cover; border-radius: 4px;" 
+                     alt="{{ $block.Title }}">
             {{ end }}
         {{ end }}
     {{ end }}
 
-    {{/* Hero text with reduced gap */}}
+    {{/* Hero Text - Increased Width & Adjusted Spacing */}}
     {{ with $block.content.text }}
-      <div class="hero-lead text-justify" style="max-width: 800px; margin: -1rem;">
-        {{ . | $page.RenderString | emojify }}
-      </div>
+        <div class="hero-lead text-justify" 
+             style="max-width: 1700px; font-size: 1.00rem; line-height: 1.6; margin-top: -0.80rem;">
+            {{ . | $page.RenderString | emojify }}
+        </div>
     {{ end }}
 
-    {{/* Call-to-action button with reduced spacing */}}
+
+
+    {{/* Call-to-Action Button - Simple & Professional */}}
     {{ if $block.content.cta.url }}
-        <p class="cta-btns mt-0">
-            <a href="{{ $block.content.cta.url | safeURL }}" class="btn btn-primary btn-lg">
+        <p class="cta-btns mt-2">
+            <a href="{{ $block.content.cta.url | safeURL }}" class="btn btn-primary btn-lg"
+               style="padding: 12px 26px; font-size: 1.1rem; font-weight: 500; border-radius: 6px; 
+                      background-color: #0056b3; border: none; transition: all 0.2s ease-in-out;">
                 {{ $block.content.cta.label | markdownify | emojify | safeHTML }}
             </a>
         </p>
