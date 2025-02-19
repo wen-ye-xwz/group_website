@@ -10,107 +10,99 @@
 <style>
     .hero-container {
         min-height: 50vh;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        padding: 2rem 1rem;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
+        gap: 2rem;
     }
 
     .hero-img {
-        width: 100%;
-        height: 350px; 
-        max-height: 500px;
+        width: 55%;
+        max-width: 550px;
+        height: auto;
         object-fit: cover;
-        object-position: center; 
-        border-radius: 4px;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        border-radius: 6px;
     }
 
-    .hero-lead {
-        margin-top: 0rem;
-        margin-bottom: 0rem;
+    .hero-text {
+        width: 60%;
+        text-align: justify;
     }
 
+    /* Tablet View (768px - 1024px) - Adjust Proportions */
+    @media (max-width: 1024px) { 
+        .hero-container {
+            flex-direction: row;
+            gap: 2.5rem;
+            /* padding-left: -2rem!important;
+            padding-right: -2rem!important; */
+            margin-left:0rem!important;
+        }
+        .hero-img {
+            width: 35%;
+            max-width: 400px;
+            /* padding-top: -2rem!important;
+            padding-top: -2rem!important; */
+        }
+        .hero-text {
+            width: 65%;
+        }
+    }
+
+    /* Mobile View (Below 768px) */
     @media (max-width: 768px) { 
         .hero-container {
-            padding: 5px !important;
-            text-align: center !important;
-        }
-        .hero-img {
-            max-width: 95% !important;
-            max-height: 350px; 
-            height: auto !important;
-            object-fit: contain; 
-        }
-        .hero-lead {
-            font-size: 0.9rem !important;
-            padding: 0 10px;
+            flex-direction: column;
             text-align: center;
         }
-        .btn-lg {
-            padding: 8px 15px !important;
-            font-size: 0.9rem !important;
-        }
-    }
-    
-    @media (min-width: 1200px) and (max-width: 1600px) { 
-        .hero-container {
-            min-height: 45vh;
-            padding-top: 0rem !important;
-            margin-top: -1rem;
-            padding-bottom: 0rem !important;
-        }
         .hero-img {
-            width: 85%; 
-            height: 330px; 
-            max-height: 500px;
-            object-fit: cover;
-            object-position: center;
-            margin-top: -0.5rem;
-            margin-bottom: -0.5rem;
+            width: 90%;
+            max-width: 350px;
+            margin-top: 2rem!important;
         }
-        .hero-lead {
-            margin-top: -1rem;
-            margin-bottom: -1rem;
+        .hero-text {
+            width: 100%;
+            text-align: justify;
+            margin-top: -2rem!important;
+            padding-bottom: 0rem!important;
         }
     }
 </style>
 
-<div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center hero-container">
-
-    {{/* Hero Image - Cropped and Centered */}}
+<div class="container-fluid hero-container" style="margin-top: -4rem; margin-bottom: -3rem;">
+    {{/* Hero Image - Left Side */}}
     {{ if $block.content.image.filename }}
         {{- $image := resources.Get (path.Join "media" $block.content.image.filename) -}}
         {{ if $image }}
             {{ $isSVG := eq $image.MediaType.SubType "svg" }}
             {{ if $isSVG -}}
-                <img src="{{ $image.RelPermalink }}" alt="{{ $block.Title }}" class="img-fluid my-2 hero-img">
+                <img src="{{ $image.RelPermalink }}" alt="{{ $block.Title }}" class="img-fluid hero-img">
             {{- else }}
                 {{ $legacy_img := $image.Resize "1200x" }}  
-                <img src="{{ $legacy_img.RelPermalink }}" class="img-fluid my-2 hero-img" alt="{{ $block.Title }}">
+                <img src="{{ $legacy_img.RelPermalink }}" class="img-fluid hero-img" alt="{{ $block.Title }}">
             {{ end }}
         {{ end }}
     {{ end }}
 
-    {{/* Hero Text - Adjusted for Laptops & Tablets */}}
-    {{ with $block.content.text }}
-        <div class="hero-lead text-justify" 
-            style="max-width: 100%; font-size: 1.0rem; line-height: 1.6;">
-            {{ . | $page.RenderString | emojify }}
-        </div>
-    {{ end }}
+    {{/* Hero Text - Right Side */}}
+    <div class="hero-text">
+        {{ with $block.content.text }}
+            <div class="hero-lead" style="font-size: 1.1rem; line-height: 1.6;">
+                {{ . | $page.RenderString | emojify }}
+            </div>
+        {{ end }}
 
-    {{/* Call-to-Action Button - Responsive */}}
-    {{ if $block.content.cta.url }}
-        <p class="cta-btns mt-2">
-            <a href="{{ $block.content.cta.url | safeURL }}" class="btn btn-primary btn-lg"
-            style="padding: 12px 26px; font-size: 1.1rem; font-weight: 500; border-radius: 6px; 
-                    background-color: #0056b3; border: none; transition: all 0.2s ease-in-out;">
-                {{ $block.content.cta.label | markdownify | emojify | safeHTML }}
-            </a>
-        </p>
-    {{ end }}
-
+        {{/* Call-to-Action Button */}}
+        {{ if $block.content.cta.url }}
+            <p class="cta-btns mt-3">
+                <a href="{{ $block.content.cta.url | safeURL }}" class="btn btn-primary btn-lg"
+                style="padding: 12px 26px; font-size: 1.1rem; font-weight: 500; border-radius: 6px; 
+                        background-color: #0056b3; border: none; transition: all 0.2s ease-in-out;">
+                    {{ $block.content.cta.label | markdownify | emojify | safeHTML }}
+                </a>
+            </p>
+        {{ end }}
+    </div>
 </div>
