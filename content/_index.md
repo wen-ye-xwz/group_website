@@ -16,7 +16,7 @@ sections:
       text: |
         <br>
         
-        The USC Melady Lab is a leader in advancing machine learning and data mining algorithms to extract meaningful insights from complex data. Our research spans a wide array of domains, including **time series modeling, interpretable machine learning, causal mining, deep learning for healthcare, social network analysis, physics-informed machine learning**. Through our innovative techniques, we have contributed to impactful discoveries and real-world applications across diverse disciplines. We collaborate with domain experts to apply developed methodologies across various fields such as computational biology, public health, and energy management. Our work aims to **provide practical solutions to pressing real world challenges**, shaping the future of intelligent systems and data-driven decision-making.
+        The USC Melady Lab is a leading research group in core machine learning and AI models as well as applications in health and sustainability. Recent research thrusts include **foundation models for time series, interpretable machine learning, physics-informed AI, and so on.** 
 
 
 
