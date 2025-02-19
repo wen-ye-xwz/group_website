@@ -73,7 +73,22 @@
 
 
 </style>
+
 <div class="media stream-item view-compact">
+  <div class="mr-3" style="padding-top: 1%;">
+    {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+{{ with $resource }}
+  {{ $image := .Fill "800x400 Center" }}
+  {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+  <div class="media">
+    <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
+      <img src="{{ $image.RelPermalink }}" width="300px !important" height="200px !important"
+           alt="{{ $item.Title }}" loading="lazy">
+    </a>
+  </div>
+{{end}}
+
+  </div>
   <div class="media-body">
 
     <div class="section-subheading article-title mb-0 mt-0">
@@ -116,20 +131,6 @@
       {{ partial "page_links" (dict "page" $item "is_list" 1) }}
     </div>
     {{ end }}
-
-  </div>
-  <div class="ml-3">
-    {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
-{{ with $resource }}
-  {{ $image := .Fill "800x400 Center" }}
-  {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
-  <div class="media">
-    <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
-      <img src="{{ $image.RelPermalink }}" width="300px !important" height="200px !important"
-           alt="{{ $item.Title }}" loading="lazy">
-    </a>
-  </div>
-{{end}}
 
   </div>
 </div>
